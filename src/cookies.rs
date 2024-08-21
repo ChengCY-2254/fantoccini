@@ -12,7 +12,8 @@ use crate::error;
 
 /// Type alias for a [cookie::Cookie]
 pub type Cookie<'a> = cookie::Cookie<'a>;
-
+/// Cookie error
+pub use cookie::ParseError;
 /// Wrapper for serializing AddCookieParameters.
 #[derive(Debug, Serialize)]
 pub(crate) struct AddCookieParametersWrapper<'a> {
